@@ -21,8 +21,8 @@ void shoping(int*need){
 		else
 			buy=0;
 		printf("Shop №%d buy %d need %d goods %d\n",namber,buy,*need,shops[namber]);
-		sleep(2);
        		pthread_mutex_unlock(&m1);
+		sleep(2);
 	}
 }
 
@@ -35,8 +35,8 @@ void supply(){
 		i=rand()%5;
 		shops[i]+=product;
                 printf("product %d  goods% d shop №%d\n", product, shops[i], i);
+       		pthread_mutex_unlock(&m1);
 		sleep(4);
-   	        pthread_mutex_unlock(&m1);
 	}
 }
 
